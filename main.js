@@ -34,11 +34,22 @@ let calcularhoras =function () {
     datos.noche2_descanso4 = noche2_descanso4;
 };
 
-for (let i = 0; i < 5; i++) {
-    const num = 5;
-    const i = moment(hora).add(num, 'd').format("DD-MM-YYYY HH:mm");
-    console.log(i)
-}
+calcularhoras();
+console.log(datos)
 
+for (let i = 0; i < 10; i++) {
+    const suma = 5;
+    const sumando = moment(hora).add(i * suma, 'd').format("DD-MM-YYYY HH:mm");
+    const dia1 = moment(hora).add(0 +(i * suma), 'd').format("DD-MM-YYYY HH:mm");
+    const dia1_descanso1 = moment(hora).add(12 +(i * suma), 'd').format("DD-MM-YYYY HH:mm");
+    const dia2 = moment(hora).add(24, 'h').format("DD-MM-YYYY HH:mm");
+    const dia2_descanso2 = moment(hora).add(36, 'h').format("DD-MM-YYYY HH:mm");
+    const dia2_descanso3 = moment(hora).add(48, 'h').format("DD-MM-YYYY HH:mm");
 
+		calcularhoras();
 
+		console.log(dia1)
+		console.log(dia1_descanso1)
+		console.log(datos)
+
+};
