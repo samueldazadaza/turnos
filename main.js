@@ -37,7 +37,7 @@ function calcularturno() {
         desN5 =  (hoy + (unciclo * i)) + (docehoras * 11);
         
 
-        document.write(`<hr>Ciclo Lboral #:👉<strong>${i+1 } </strong><br> `);
+        document.write(`<hr>Ciclo Laboral #:👉<strong>${i+1 } </strong><br> `);
         document.write(new Date(dia1).toLocaleString() + " =🌞DIA1<br>" );
         document.write(new Date(des1).toLocaleString() + " =🌞DIA1🍻descanso<br>");
         document.write(new Date(dia2).toLocaleString() + " =🌞DIA2<br>");
