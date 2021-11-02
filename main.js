@@ -37,19 +37,19 @@ function calcularturno() {
         desN5 =  (hoy + (unciclo * i)) + (docehoras * 11);
         
 
-        document.write(`<hr>DIA LABORAL:👉${i} 🎃<br> `);
+        document.write(`<hr>DIA LABORAL:👉<strong>${i} </strong><br> `);
         document.write(new Date(dia1).toLocaleString() + " =🌞DIA1<br>" );
         document.write(new Date(des1).toLocaleString() + " =🌞DIA1🍻descanso<br>");
         document.write(new Date(dia2).toLocaleString() + " =🌞DIA2<br>");
-        document.write(new Date(des2).toLocaleString() + " =🌞DES2🍻descanso<br> " );
-        document.write(new Date(des3).toLocaleString() + " =🌞DES2🍻descanso</br><br>");
+        document.write(new Date(des2).toLocaleString() + " =🌞DIA2🍻descanso<br> " );
+        document.write(new Date(des3).toLocaleString() + " =🌞DIA3🍻descanso</br><br>");
 
         document.write(new Date(noc1).toLocaleString() + " =🌚NOCHE1 <br> " );
         document.write(new Date(desN1).toLocaleString() + " =🌚NOCHE1🍻descanso<br> ");
         document.write(new Date(noc2).toLocaleString() + " =🌚NOCHE2<br>");
         document.write(new Date(desN2).toLocaleString() + " =🌚NOCHE2🍻descanso<br>");
         document.write(new Date(desN3).toLocaleString() + " =🌚NOCHE3🍻descanso<br>");
-        document.write(new Date(desN4).toLocaleString() + " =🌚NOCHE4🍻descanso<br>");
-        document.write(new Date(desN5).toLocaleString() + " =🌚NOCHE5🍻descanso<br>");
+        document.write(new Date(desN4).toLocaleString() + " =🌚NOCHE3🍻descanso<br>");
+        document.write(new Date(desN5).toLocaleString() + " =🌚NOCHE4🍻descanso<br>");
     };
 });
