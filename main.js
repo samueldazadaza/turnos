@@ -1,55 +1,31 @@
-//llamando libreria moment
-const moment = require ('moment');
+//constantes
+const docehoras = 43200000;
+const seishoras = (docehoras / 2);
+const undia = (docehoras * 2);
+const unciclo = (docehoras * 10)
 
-//variables
-const hora = moment([2021, 10, 19, 06]); // fecha ingresada por user
-const descanso = 12; //horas de descanso
-const datos = {};
+//fecha a calcular
+const  hoy = (new Date('11-01-2021').getTime()) + seishoras
+console.log(new Date(hoy).toLocaleString())
 
-let calcularhoras =function () {
-    const dia1 = moment(hora).add(0, 'h').format("DD-MM-YYYY HH:mm");
-    const dia1_descanso1 = moment(hora).add(12, 'h').format("DD-MM-YYYY HH:mm");
-    const dia2 = moment(hora).add(24, 'h').format("DD-MM-YYYY HH:mm");
-    const dia2_descanso2 = moment(hora).add(36, 'h').format("DD-MM-YYYY HH:mm");
-    const dia2_descanso3 = moment(hora).add(48, 'h').format("DD-MM-YYYY HH:mm");
 
-    datos.dia1 = dia1;
-    datos.dia1_descanso1 = dia1_descanso1;
-    datos.dia2 = dia2;
-    datos.dia2_descanso2 = dia2_descanso2;
-    datos.dia2_descanso3 = dia2_descanso3;
+//iterar cada  cierto de descanso
+for(i=1;i<10;i++) {
+    calcularturno();
+}
 
-    const noche1 = moment(hora).add(60, 'h').format("DD-MM-YYYY HH:mm");
-    const noche1_descanso1 = moment(hora).add(72, 'h').format("DD-MM-YYYY HH:mm");
-    const noche2 = moment(hora).add(84, 'h').format("DD-MM-YYYY HH:mm");
-    const noche2_descanso2 = moment(hora).add(96, 'h').format("DD-MM-YYYY HH:mm");
-    const noche2_descanso3 = moment(hora).add(108, 'h').format("DD-MM-YYYY HH:mm");
-    const noche2_descanso4 = moment(hora).add(120, 'h').format("DD-MM-YYYY HH:mm");
+//funcion para calcular turnos y horarios
+function calcularturno() {
+    dia1 = (hoy + (unciclo * i)) + (docehoras * 0);
+    des1 =  (hoy + (unciclo * i)) + (docehoras * 1);
+    dia2 =  (hoy + (unciclo * i)) + (docehoras * 2);
+    des2 =  (hoy + (unciclo * i)) + (docehoras * 3);
+    des3 =  (hoy + (unciclo * i)) + (docehoras * 4);
 
-    datos.noche1 = noche1;
-    datos.noche1_descanso1 = noche1_descanso1;
-    datos.noche2 = noche2;
-    datos.noche2_descanso2 = noche2_descanso2;
-    datos.noche2_descanso3 = noche2_descanso3;
-    datos.noche2_descanso4 = noche2_descanso4;
-};
+    document.write("<br> DIA1:🎃🎃" + new Date(dia1).toLocaleString());
+    document.write("<br> DES1:👉" + new Date(des1).toLocaleString());
+    document.write("<br> DIA2:👉" + new Date(dia2).toLocaleString());
+    document.write("<br> DES2:👉" + new Date(des2).toLocaleString());
+    document.write("<br> DES2:👉" + new Date(des3).toLocaleString() + "</br>");
+}
 
-calcularhoras();
-console.log(datos)
-
-for (let i = 0; i < 10; i++) {
-    const suma = 5;
-    const sumando = moment(hora).add(i * suma, 'd').format("DD-MM-YYYY HH:mm");
-    const dia1 = moment(hora).add(0 +(i * suma), 'd').format("DD-MM-YYYY HH:mm");
-    const dia1_descanso1 = moment(hora).add(12 +(i * suma), 'd').format("DD-MM-YYYY HH:mm");
-    const dia2 = moment(hora).add(24, 'h').format("DD-MM-YYYY HH:mm");
-    const dia2_descanso2 = moment(hora).add(36, 'h').format("DD-MM-YYYY HH:mm");
-    const dia2_descanso3 = moment(hora).add(48, 'h').format("DD-MM-YYYY HH:mm");
-
-		calcularhoras();
-
-		console.log(dia1)
-		console.log(dia1_descanso1)
-		console.log(datos)
-
-};
