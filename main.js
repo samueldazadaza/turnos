@@ -14,7 +14,7 @@ const hoy = (new Date(txtinput).getTime()) + (docehoras / 2)
 console.log(hoy);
 
 //iterar cada  cierto de descanso
-for(i=1;i<150;i++) {
+for(i=0;i<150;i++) {
     calcularturno();
 }
 
